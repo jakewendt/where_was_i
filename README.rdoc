@@ -1,0 +1,11 @@
+= Where was I?
+
+Shows positions submitted by users, 
+	filterable by email address
+	and limitable by count
+
+
+http://wherewasi.jakewendt.com/somebody@somewhere.com
+
+Shows a map with all of somebody's positions
+
