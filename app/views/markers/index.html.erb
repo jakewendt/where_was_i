@@ -1,10 +1,7 @@
 <script type="text/javascript">
-<% @markers.each do |marker| %>
-<% unless marker.latitude.blank? || marker.longitude.blank? %>
-markers.push({
-  lat: <%=marker.latitude-%>,
-  lng: <%=marker.longitude%>
-});
-<% end %>
-<% end %>
+<% @markers.each do |marker| -%>
+<% unless marker.latitude.blank? || marker.longitude.blank? -%>
+markers.push({ lat:<%=marker.latitude-%>, lng:<%=marker.longitude-%> });
+<% end -%>
+<% end -%>
 </script>
