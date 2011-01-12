@@ -44,16 +44,20 @@ class MarkersController < ApplicationController
 	# POST /markers.xml
 	def create
 		@marker = Marker.new(params[:marker])
+		@marker.save!
+		render :text => "Success", :layout => false
+	rescue
+		render :text => "Failure", :layout => false
 
-		respond_to do |format|
-			if @marker.save
-				format.html { redirect_to(@marker, :notice => 'Marker was successfully created.') }
-				format.xml	{ render :xml => @marker, :status => :created, :location => @marker }
-			else
-				format.html { render :action => "new" }
-				format.xml	{ render :xml => @marker.errors, :status => :unprocessable_entity }
-			end
-		end
+#		respond_to do |format|
+#			if @marker.save
+#				format.html { redirect_to(@marker, :notice => 'Marker was successfully created.') }
+#				format.xml	{ render :xml => @marker, :status => :created, :location => @marker }
+#			else
+#				format.html { render :action => "new" }
+#				format.xml	{ render :xml => @marker.errors, :status => :unprocessable_entity }
+#			end
+#		end
 	end
 
 #	# PUT /markers/1

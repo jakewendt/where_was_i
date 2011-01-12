@@ -1,18 +1,8 @@
-<h1>Listing markers</h1>
-
-<table>
-  <tr>
-  </tr>
-
+<script type="text/javascript">
 <% @markers.each do |marker| %>
-  <tr>
-    <td><%= link_to 'Show', marker %></td>
-    <td><%#= link_to 'Edit', edit_marker_path(marker) %></td>
-    <td><%#= link_to 'Destroy', marker, :confirm => 'Are you sure?', :method => :delete %></td>
-  </tr>
+markers.push({
+  lat: <%=marker.latitude-%>,
+  lng: <%=marker.longitude%>
+});
 <% end %>
-</table>
-
-<br />
-
-<%#= link_to 'New marker', new_marker_path %>
+</script>

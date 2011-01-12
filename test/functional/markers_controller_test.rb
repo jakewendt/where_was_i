@@ -16,8 +16,8 @@ class MarkersControllerTest < ActionController::TestCase
 		assert_difference('Marker.count') do
 			post :create, :marker => { }
 		end
-
-		assert_redirected_to marker_path(assigns(:marker))
+		assert_match /Success/, @response.body
+#		assert_redirected_to marker_path(assigns(:marker))
 	end
 
 	test "should show marker" do

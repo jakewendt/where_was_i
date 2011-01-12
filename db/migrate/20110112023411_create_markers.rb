@@ -3,9 +3,9 @@ class CreateMarkers < ActiveRecord::Migration
 		create_table :markers do |t|
 			t.string :phonenumber
 			t.string :deviceid
-			t.double :latitude
-			t.double :longitude
-			t.double :direction
+			t.float  :latitude
+			t.float  :longitude
+			t.float  :direction
 			t.string :name
 			t.string :email
 			t.timestamps
