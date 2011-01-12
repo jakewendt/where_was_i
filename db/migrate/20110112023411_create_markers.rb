@@ -1,8 +1,8 @@
 class CreateMarkers < ActiveRecord::Migration
 	def self.up
 		create_table :markers do |t|
-			t.string :phonenumber
-			t.string :deviceid
+			t.string :phone_number
+			t.string :device_id
 			t.float  :latitude
 			t.float  :longitude
 			t.float  :direction
