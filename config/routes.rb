@@ -1,3 +1,3 @@
 ActionController::Routing::Routes.draw do |map|
-	map.resources :markers
+	map.resources :markers, :only => [:index,:show,:create]
 end
