@@ -17,6 +17,10 @@ Rails::Initializer.run do |config|
 #	config.gem 'will_paginate'
 #	config.gem 'fastercsv'
 
+	config.gem 'jakewendt-simply_helpful',
+		:lib => 'simply_helpful'
+
+
 	# config.plugins = [ :exception_notification, :ssl_requirement, :all ]
 
 	config.frameworks -= [ :active_resource ]
